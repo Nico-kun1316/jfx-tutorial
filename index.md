@@ -1,4 +1,6 @@
-## Welcome to GitHub Pages
+# Spis treści
+1. [Importowanie Projektu](import.html)
+2. [Praca z gitem](git.html)
 
 You can use the [editor on GitHub](https://github.com/Nico-kun1316/jfx-tutorial/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
