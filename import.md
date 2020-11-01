@@ -16,6 +16,6 @@ Jeśli wszystko jest OK, powinniśmy teraz móc skompilować i otworzyć projekt
 ![Run configs](images/intellij_configs.png)
 
 Jeśli nie mamy konfiguracji, należy kliknąć szybko dwa razy klawisz *CTRL* i wpisać **gradlew run**, zatwierdzić klawiszem *ENTER*.
-![Gradlew run](images/gradlew run.png)
+![Gradlew run](images/gradlew_run.png)
 
 Z menu konfiguracji możemy teraz zapisać tę konfigurację na przyszłość.
