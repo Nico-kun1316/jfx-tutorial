@@ -23,4 +23,7 @@ Rozgałęzianie się przedstawia ten flowchart:
 ***Uwaga:*** bezpośrednio na masterze nie powinniśmy pracować prawie nigdy. Jako rule of thumb, dla każdej nowej zawartości jaką dodajemy, lub buga który naprawiamy, tworzymy nowy branch, którego nazwa jakoś odnosi się do tego, co robimy. Możemy do niego commitować i pushować do woli, a gdy uważamy, że skończyliśmy już nad tym pracę, wysyłamy *pull requesta*. (Formalnie, w tak małym zespole i na potrzeby akademickie, wystarczy zawiadomić osobę w teamie, która zajmuje się reviewem, że się skończyło, żeby przejrzała kod i sprawdziła, czy nie ma merge conflictów.) Obecny branch możemy zobaczyć w prawym dolnym rogu w IntelliJ.
 ![Current branch](images/intellij_current_branch.png)
 
-Po kliknięciu na obecny branch, otwiera się okienko, w którym możemy się przełączać między gałęziami (*git checkout*) i tworzyć nowe. Jeśli nie możemy utworzyć nowego brancha, najprawdopodobniej musimy najpierw *pull*nąć zmiany z remote'a. Po wybraniu *New Branch*, powita nas takie okienko. Nadajemy imię branchowi, zaznaczamy *checkout branch*, żeby po stworzeniu przełączyć się na brancha, i klikamy *Create*. Możemy teraz spokojnie pracować nad projektem.
+Po kliknięciu na obecny branch, otwiera się okienko, w którym możemy się przełączać między gałęziami (*git checkout*) i tworzyć nowe. Jeśli nie możemy utworzyć nowego brancha, najprawdopodobniej musimy najpierw *pull*nąć zmiany z remote'a.
+![Branch dialog](images/intellij_branch_dialog.png)
+Po wybraniu *New Branch*, powita nas takie okienko. Nadajemy imię branchowi, zaznaczamy *checkout branch*, żeby po stworzeniu przełączyć się na brancha, i klikamy *Create*. Możemy teraz spokojnie pracować nad projektem.
+![Create branch](images/intellij_create_branch.png)
