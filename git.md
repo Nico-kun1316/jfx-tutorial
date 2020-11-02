@@ -34,3 +34,4 @@ Po kliknięciu na obecny branch, otwiera się okienko, w którym możemy się pr
 Po wybraniu *New Branch*, powita nas takie okienko. Nadajemy imię branchowi, zaznaczamy *checkout branch*, żeby po stworzeniu przełączyć się na brancha, i klikamy *Create*. Możemy teraz spokojnie pracować nad projektem.
 
 ![Create branch](images/intellij_create_branch.png)
+***Uwaga:*** Rozgałęziamy się od obecnej gałęzi. Powinniśmy więc zazwyczaj najpierw zmienić brancha na master, spullować zmiany, i dopiero wtedy stworzyć nowy branch.
