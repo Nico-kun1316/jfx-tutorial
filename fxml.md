@@ -6,7 +6,7 @@ Jak już wiemy, pierwsze okno aplikacji zostanie dla nas utworzone automatycznie
 ```java
 Stage win = new Stage()
 ```
-Teraz do okna możemy odnieść się za pomocą zmiennej `win`. Okno nie pokazuje się automatycznie - żeby się pokazało, wywołujemy instrukcję `win.show()`. Takie okno jest niestety ciągle bardzo puste. W poprzednim dokumencie, mówiliśmy, że każde okno ma swoją scenę, która gości interfejs użytkownika. Stwórzmy więc taką scenę.
+Teraz do okna możemy odnieść się za pomocą zmiennej `win`. Okno nie pokazuje się automatycznie - żeby się pokazało, wywołujemy instrukcję `win.show()`. Takie okno jest niestety ciągle bardzo puste. W poprzednim dokumencie mówiliśmy, że każde okno ma swoją scenę, która gości interfejs użytkownika. Stwórzmy więc taką scenę.
 ```java
 VBox root = new VBox();
 Scene scene = new Scene(root);
@@ -88,4 +88,26 @@ W oknie wyboru, gdzie utworzyć tę klasę, wybieramy *src/main/java*.
 
 ![Create Controller Dir](images/fml_controller_create_dir.png)
 
+Zamieńmy domyślny AnchorPane na VBoxa, i dodajmy do niego przycisk i pole tekstowe. Powinno to teraz wyglądać tak:
 
+![FXML Element Tree](images/fml_elems.png)
+
+Wszystko jest na razie fajnie, ale nasz przycisk nic nie robi. Naprawmy to. Mówiliśmy wcześniej o tym, że kontroler obsługuje wydarzenia, które dzieją się w naszym interfejsie użytkownika. Niech więc obsłuży wydarzenie aktywacji przycisku. Żeby zmienić właściwości jakiegoś elementu w XML, na przykład `<Button>Im a button</Button>` używamy takiej składni: `<Button attribute=value>Im a button</Button>` gdzie attribute to właściwość, a value to jego wartość. W tym wypadku nasz atrybut to `onAction`, czyli co się dzieje po aktywacji przycisku, a wartość to nazwa funkcji, która ma być wywołana po aktywacji przycisku. Nasz przycisk będzie więc wyglądał tak: 
+
+![FXML Action](images/fml_button_action.png)
+
+Teraz po aktywacji przycisku zostanie wywołana funkcja `changeLabel`. # przed nazwą funkcji jest wymagany. Na razie jest ona czerwona, czyli jeszcze nie istnieje. Ustawmy na niej kursor i kliknijmy `ALT + ENTER` lub kliknijmy na żarówkę. Wybierzmy *Create method*
+
+![FXML Create Action Method](images/fml_action_fix.png)
+
+Zostanie utworzona nasza funkcja. Kod, który wpiszemy w jej środku, zostanie wykonany *za każdym razem*, gdy aktywujemy przycisk. Jeśli w środku niej wpiszemy `System.out.println("Dzień dobry panie ministrze!");`, to za każdym razem po kliknięciu przycisku wypiszemy do konsoli *Dzień dobry panie ministrze!*. Spróbujmy zmienić tekst naszego Labelka po kliknięciu przycisku. Żeby móc to zrobić, musimy najpierw miec możliwość odniesienia się do naszego Labelka. Żeby dodać obsługę onAction dla przycisku, robiliśmy `onAction="#nazwaFunkcji"`. Żeby dodać id do naszego Labelka posłużymy się więc `fx:id="naszeId"`. Po dodaniu tego atrybutu, będzie on podświetlony dziwnym żółtym kolorem. Oznacza to, że na razie nie ma go w kodzie.
+
+![FXML Label ID](images/fml_label_id.png)
+
+Naprawiamy to tak samo jak nasze `onAction` czy nasz controller. *ALT + ENTER* i wybieramy *Create field*. 
+
+![FXML Id Fix](images/fml_id_fix.png)
+
+Teraz w kontrolerze możemy odnieść się do naszego Labelka za pomocą zmiennej nazwanej po id. Do zmiany tekstu używamy funkcji `setText()`. Voila.
+
+![FXML Controller Complete](images/controller_action.png)
