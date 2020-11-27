@@ -2,6 +2,8 @@
 Na potrzeby tego dokumentu, wszystkie fragmenty kodu są tworzone na nowej gałęzi. Jeśli nie chcecie tworzyć nowego projektu, też polecam wam pracować na nowej gałęzi testowej (pamiętajcie, aby commitować zmiany przed zmianą gałęzi).
 
 ## Tworzenie okna
+***Uwaga: ten fragment został tutaj zamieszczony tylko dla kompletnosci. Zalecany sposób tworzenia okna jest niżej w sekcji o kontrolerach***
+
 Jak już wiemy, pierwsze okno aplikacji zostanie dla nas utworzone automatycznie przez JavaFX. Nic nie stoi na przeszkodzie, abyśmy stworzyli nowe okna ręcznie. Przypomnijmy sobie, że okno w JavaFX to `Stage` - nowe okno tworzymy tak samo, jak jakikolwiek inny obiekt w Javie.
 ```java
 Stage win = new Stage()
@@ -80,8 +82,8 @@ Plik zostanie utworzony. IntelliJ odrazu zaznaczy nazwę kontrolera do edycji. M
 
 ![Controller Name](images/fml_controller_name.png)
 
-Nazwa naszego kontrolera jest czerwona. Oznacza to, że on nie istnieje. Aby to naprawić, przesuwamy kursor (klawiaturą lub myszką) na nazwę kontrolera, i klikamy *ALT + ENTER* lub klikamy myszką na żarówkę. Wybieramy *Create Class*.
-
+Nazwa naszego kontrolera jest czerwona. Oznacza to, że on nie istnieje. Aby to naprawić, przesuwamy kursor (klawiaturą lub myszką) na nazwę kontrolera, i klikamy *ALT + ENTER* lub klikamy myszką na żarówkę. Wybieramy *Create Class*. ***Uwaga: Do nowoutworzonej klasy należy dodać `extends Controller`, czyli jesli mamy klasę `public class Test {`
+ po zmianie powinno to wyglądać `public class Test extends Controller {`. Teraz wewnątrz kontrolera nowe okna tworzymy za pomocą `openWindow("nazwa_pliku");`
 ![Create Controller Class](images/fml_controller_create.png)
 
 W oknie wyboru, gdzie utworzyć tę klasę, wybieramy *src/main/java*.
